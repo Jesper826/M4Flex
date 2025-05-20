@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-
+using weerapi.Models;
 namespace weerapi.Controllers;
 
 [ApiController]
@@ -25,8 +25,10 @@ public class WeatherForecastController : ControllerBase
         {
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            Summary = Summaries[Random.Shared.Next(Summaries.Length)],
+            City = "amsterdam"
         })
         .ToArray();
-    }
+    }    
+
 }
