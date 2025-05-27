@@ -2,7 +2,6 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using newssite.Models;
 using System.Text.Json;
-
 namespace newssite.Controllers;
 
 public class HomeController : Controller
@@ -26,7 +25,13 @@ public class HomeController : Controller
     public IActionResult Privacy()
     {
         Privacy model = new Privacy();
-        model.PolicyText = "This is the privacy policy text.";
+        model.PolicyText = "pwlese dont stweel from meee :sadface:";
+        return View(model);
+    }
+    public IActionResult MyGames()
+    {
+        MyGames model = new MyGames();
+        model.title = "thise is one of my games";
         return View(model);
     }
 
@@ -35,6 +40,4 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-    
-    
 }

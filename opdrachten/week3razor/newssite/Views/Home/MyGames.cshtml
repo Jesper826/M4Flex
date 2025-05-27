@@ -8,11 +8,4 @@
 </div>
 
 
-@{
-    foreach (NewsItem item in Model)
-    {
-        <h2>@item.Title</h2>
-        <section>@item.Content</section>
-        <img src="img/newsitem.PNG" alt="">
-    }
-}
+<section>@Model.title</section>
